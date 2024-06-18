@@ -29,9 +29,7 @@ function verSaldo(saldo) {
   return `Seu saldo atual é de R$ ${saldo.toFixed(2)}`;
 }
 
-function sacar(saldo) {
-  let saque = Number(ler("Digite a quantia que deseja sacar > "));
-
+function sacar(saldo, saque) {
   while (saque > saldo) {
     limparTerminal(ERRO, "Quantia invalida !!");
     saque = Number(ler("Digite a quantia que deseja sacar > "));

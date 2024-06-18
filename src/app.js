@@ -28,7 +28,9 @@ while (continuar) {
     saldo = novoSaldo;
     limparTerminal(SUCESSO, "Deposito realizado com sucesso !!");
   } else if (opcao == 2) {
-    let novoSaque = sacar(saldo);
+    let saque = Number(ler("Digite o valor do saque > "));
+
+    let novoSaque = sacar(saldo, saque);
     saldo = novoSaque;
     limparTerminal(SUCESSO, "Saque realizado com sucesso !!");
   } else if (opcao == 3) {
